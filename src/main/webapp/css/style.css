@@ -1,0 +1,59 @@
+header strong{
+    font-size: 12px;
+    color:  blue;
+}
+.jumbotron{
+    width: 80%;
+    margin: 0 auto;
+}
+.center{
+    text-align: center;
+}
+.div-value{
+    margin: 5px 0 5px 0;
+    display: block;
+}
+.div-value input{
+    max-width: 80px;
+}
+.div-button button{
+    width: 135px;
+    margin: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 13px;
+}
+.div-game-panel{
+    display: table;
+    border-collapse:collapse;
+    margin: 0 auto;
+}
+.div-game-row{
+    display:table-row;
+}
+.cell{
+    background-color:#6087FF;
+    cursor:pointer;
+    font-size:12px;
+    height:20px;
+    min-width:20px;
+    width:20px;
+    display: table-cell;
+    border: 1px solid black;
+}
+.cell:hover{
+    background-color:#00F;
+}
+.cell-alive{
+    background-color:#6FFF84;
+    cursor:pointer;
+    font-size:12px;
+    height:20px;
+    min-width:20px;
+    width:20px;
+    display: table-cell;
+    border: 1px solid black;
+}
+.cell-alive:hover{
+    background-color:#006600;
+}
+
