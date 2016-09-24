@@ -38,7 +38,7 @@ class Cell {
             neighbors.add(cells[cell.y][cell.x + 1])
         }
         //Below columns
-        if (cell.y < cells.length) {
+        if (cell.y < cells.length - 1) {
             //Below left
             if (cell.x > 0) {
                 neighbors.add(cells[cell.y + 1][cell.x - 1])
@@ -46,7 +46,7 @@ class Cell {
             //Below
             neighbors.add(cells[cell.y + 1][cell.x])
             //Below right
-            if (cell.x < cells[0].length) {
+            if (cell.x < cells[0].length - 1) {
                 neighbors.add(cells[cell.y + 1][cell.x + 1])
             }
         }
