@@ -15,7 +15,7 @@ class GameOfLifeService {
                 def cell = new Cell(y: rowCell[x].y, x: rowCell[x].x, alive: rowCell[x].alive)
                 def neighbors = cell.getNeighbors(cell, cells)
                 cell.checkIfLiveOrDie(cell, neighbors)
-                newGeneration[y][x] = cell
+                nextGeneration[y][x] = cell
             }
         }
         nextGeneration
