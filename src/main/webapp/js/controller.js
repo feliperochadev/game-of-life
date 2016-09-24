@@ -16,6 +16,27 @@
             }
             $scope.cells = cells;
         }
+        var startGame = function (cells, config) {
+            if ((config.running) && config.steps > 0) {
+                $http.put("/api/v1/game-of-life", cells).success(function (data) {
+                    cells = data
+                    $scope.cells = cells
+                    config.gameStarted = config.steps > 1 && (config.gameStarted)
+                    config.running = config.steps > 1 && (config.running)
+                    config.steps--
+                    $scope.config = config
+                    setTimeout(function () {
+                        startGame(cells, config, false)
+                    }, config.ms)
+                })
+            }
+        }
+        var stopGame = function (config) {
+            config.gameStarted = false
+            config.running = false
+            $scope.config = config
+        }
+
         loadConfig(config)
     }
 })(angular)
