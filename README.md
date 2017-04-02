@@ -29,5 +29,6 @@ Gradle 3.x.
 
 Go to http://localhost:8888
 
-aaaa
+
+testmaster
 
